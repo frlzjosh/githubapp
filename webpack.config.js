@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
   });
 
 module.exports = {
-    entry: path.join(__dirname, 'src', 'components', 'App.js'),
+    entry: path.join(__dirname, 'src', 'js', 'App.js'),
     // And to place the output in the `build` directory
     output: {
     path: path.join(__dirname, 'dist'),
@@ -26,25 +26,16 @@ module.exports = {
           }
         },
         {
-            test: /\.css$/,
+            test: /\.scss$/,
             use: [
-                {
-                    loader: "style-loader"
-                },
-                {
-                    loader: "css-loader",
-                    options: {
-                        modules: true,
-                        importLoaders: 1,
-                        localIdentName: "[name]_[local]_[hash:base64]",
-                        sourceMap: true,
-                        minimize: true
-                    }
-                },
+                'style-loader',
+                'css-loader',
+                'sass-loader'
             ]
         }
       ]
     },
-    plugins: [htmlPlugin]
+    plugins: [htmlPlugin],
+    
 
   };
