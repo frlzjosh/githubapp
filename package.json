@@ -1,0 +1,42 @@
+{
+  "name": "githubapp",
+  "version": "1.0.0",
+  "description": "SPA react app using react-router for my github.io website",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frlzjosh/githubapp.git"
+  },
+  "author": "Joshua J. Magdaleno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frlzjosh/githubapp/issues"
+  },
+  "homepage": "https://github.com/frlzjosh/githubapp#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "yarn": "^1.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
