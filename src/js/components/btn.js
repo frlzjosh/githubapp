@@ -4,17 +4,11 @@ import ReactDOM from "react-dom";
 import { Button } from 'semantic-ui-react';
 
 export default class ButtonEx extends React.Component {
-render (){
+    render (){
         return (
-
-            <Button>Click HERE</Button>
-            
-
-        )
+            <div>
+                <Button>Click HERE</Button>
+            </div>
+        );
     }
 }
-
-ReactDOM.render(
-    <ButtonEx/>,
-    document.getElementById('root')
-  );
