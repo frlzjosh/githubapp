@@ -1,3 +1,13 @@
+@import "variables.scss";
+
+
 body{
-    background-color: grey;
+    background-color: #1F363D;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
+
+p{
+    color: $grey;
+    font-size: 1rem;
+}
+
