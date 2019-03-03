@@ -12,13 +12,13 @@ function content(props){
     );
  }
 
-export default class Card extends React.Component {
+export default class Panel extends React.Component {
     render() {
         return (
             <div className="panel">
                 <Header as='h2'>
                     <Icon name='plug' />
-                    <Header.Content>Uptime Guarantee</Header.Content>
+                    <Header.Content>Projects</Header.Content>
                 </Header>
             </div>
         );

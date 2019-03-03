@@ -7,7 +7,7 @@ export default class ButtonEx extends React.Component {
     render (){
         return (
             <div>
-                <Button>Click HERE</Button>
+                <Button>LinkedIn Profile</Button>
             </div>
         );
     }

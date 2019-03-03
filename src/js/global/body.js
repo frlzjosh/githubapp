@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import { Divider } from 'semantic-ui-react'
+import { Divider, Header} from 'semantic-ui-react'
 import ButtonEx from './../components/btn'
-import Card from './../components/divider'
+import Panel from './../components/panel'
 
 class Body extends React.Component {
     render (){
         return (
             <div className="ui container">
-                <p>Yes</p>
+                <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
                 <ButtonEx/>
                 <Divider hidden />
-                <Card/>
+                <Panel/>
             </div>
         );
     }
