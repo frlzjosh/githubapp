@@ -1,11 +1,15 @@
+// importing sass to be compiled in this js file
+// importing components
+
 import React from 'react';
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Divider, Header} from 'semantic-ui-react'
-import ButtonEx from './../components/btn'
+import ButtonEx from '../components/btn'
 import Panel from '../components/panel'
 import DarkList from '../components/projectList'
 
-class Body extends React.Component {
+class App extends React.Component {
     render (){
         return (
             <div className="ui container">
@@ -20,6 +24,6 @@ class Body extends React.Component {
 }
 
 ReactDOM.render(
-    <Body/>,
+    <App/>,
     document.getElementById('root')
 );
