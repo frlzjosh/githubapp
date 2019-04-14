@@ -15,9 +15,9 @@ function content(props){
 export default class Panel extends React.Component {
     render() {
         return (
-            <div className="panel">
+            <div className="panel panel--pad">
                 <Header as='h2'>
-                    <Icon name='plug' />
+                    <Icon name='briefcase' />
                     <Header.Content>Projects</Header.Content>
                 </Header>
             </div>
