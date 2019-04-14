@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import { Divider, Header} from 'semantic-ui-react'
 import ButtonEx from './../components/btn'
-import Panel from './../components/panel'
+import Panel from '../components/panel'
+import DarkList from '../components/projectList'
 
 class Body extends React.Component {
     render (){
@@ -12,6 +13,7 @@ class Body extends React.Component {
                 <ButtonEx/>
                 <Divider hidden />
                 <Panel/>
+                <DarkList/>
             </div>
         );
     }

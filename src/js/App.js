@@ -6,4 +6,4 @@ import React from "react";
 import ReactDOM from "react-dom";
 // importing components
 import './learnSemantic';
-import './global/body';
+import './views/body';
