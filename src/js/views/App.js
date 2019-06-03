@@ -12,6 +12,7 @@ import DarkList from '../components/projectList'
 class App extends React.Component {
     render (){
         var metaLabProjects = ['META+LAB Website', '10 Letters', 'iSTART', 'META-UI Kit']
+        var personalProjects = ['Scraps', 'Portfolio', 'Platelist']
         return (
             <div className="ui container">
                 <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
@@ -27,7 +28,10 @@ class App extends React.Component {
                 <Panel
                     header="Hackathon's & Competitions"
                 />
-                <DarkList/>
+                <DarkList
+                    organization="PERSONAL PROJECTS"
+                    projects={personalProjects}
+                />
             </div>
         );
     }

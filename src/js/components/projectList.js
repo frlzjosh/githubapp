@@ -7,7 +7,7 @@ import {List, Segment } from 'semantic-ui-react'
 const ListExampleInverted = (props) => (
   <Segment inverted>
     <div>
-    { console.log(props.metaLabProjects) }
+    { console.log(props.projects) }
     </div>
     <List divided inverted relaxed>
       <List.Item>
@@ -15,26 +15,11 @@ const ListExampleInverted = (props) => (
       </List.Item>
       <List.Item>
       <List.Content>
-          {props.metaLabProjects}
+          {props.projects}
         </List.Content>
       </List.Item>
     </List>
     <Divider/>
-    <List divided inverted relaxed>
-      <List.Item>
-        <List.Header as="h2">{props.organization}</List.Header>
-      </List.Item>
-      <List.Item>
-      <List.Content>
-          LA HACKS: Scraps
-        </List.Content>
-      </List.Item>
-      <List.Item>
-        <List.Content>
-          NORTHROP GRUMMAN HACKATHON: Missing Person Hub
-        </List.Content>
-      </List.Item>
-    </List>
   </Segment>
 )
   
