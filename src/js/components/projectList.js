@@ -11,10 +11,10 @@ const ListExampleInverted = (props) => (
         <List.Header as="h2">{props.organization}</List.Header>
       </List.Item>
       {
-        props.projects.map((project, id)=>{
+        props.content.map((content, id)=>{
           return <List.Item key={id}>
             <List.Content>
-              <li>{project}</li>
+              <li>{content}</li>
             </List.Content>
           </List.Item>
         })

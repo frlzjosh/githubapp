@@ -13,24 +13,35 @@ class App extends React.Component {
     render (){
         var metaLabProjects = ['META+LAB Website', '10 Letters', 'iSTART', 'META-UI Kit']
         var personalProjects = ['Scraps', 'Portfolio', 'Platelist']
+        var employers = ['META+LAB', 'Medtronic Inc']
         return (
             <div className="ui container">
                 <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
                 <ButtonEx/>
                 <Divider hidden />
                 <Panel
+                    header="Work Experience"
+                />
+                <DarkList
+                    organization="META+LAB"
+                    content={employers}
+                    isEmployer={true}
+                />
+                <Panel
                     header="Projects"
                 />
                 <DarkList
                     organization="META+LAB"
-                    projects={metaLabProjects}
+                    content={metaLabProjects}
+                    isEmployer={false}
                 />
                 <Panel
                     header="Hackathon's & Competitions"
                 />
                 <DarkList
                     organization="PERSONAL PROJECTS"
-                    projects={personalProjects}
+                    content={personalProjects}
+                    isEmployer={false}
                 />
             </div>
         );
