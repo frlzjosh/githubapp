@@ -8,13 +8,18 @@ import { Divider, Header} from 'semantic-ui-react'
 import ButtonEx from '../components/btn'
 import Panel from '../components/panel'
 import DarkList from '../components/projectList'
+import Navbar from './../components/nav'
 
 class App extends React.Component {
     render (){
-        var metaLabProjects = ['META+LAB Website', '10 Letters', 'iSTART', 'META-UI Kit']
-        var personalProjects = ['Scraps', 'Portfolio', 'Platelist']
+        var metaLabProjects = ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit']
+        var medtronicProjects = ['Patient Monitor']
+        var personalProjects = ['My Portfolio', 'Scraps', 'Platelist']
+
+        var competitionsAndHackathons = ['LA Hacks', 'Bullring', 'Northrop Grumman Hackathon']
         return (
             <div className="ui container">
+                <Navbar></Navbar>
                 <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
                 <ButtonEx/>
                 <Divider hidden />
@@ -22,15 +27,23 @@ class App extends React.Component {
                     header="Projects"
                 />
                 <DarkList
+                    organization="Medtronic Inc."
+                    projects={medtronicProjects}
+                />
+                <DarkList
                     organization="META+LAB"
                     projects={metaLabProjects}
+                />
+                <DarkList
+                    organization="PERSONAL PROJECTS"
+                    projects={personalProjects}
                 />
                 <Panel
                     header="Hackathon's & Competitions"
                 />
                 <DarkList
                     organization="PERSONAL PROJECTS"
-                    projects={personalProjects}
+                    projects={competitionsAndHackathons}
                 />
             </div>
         );
