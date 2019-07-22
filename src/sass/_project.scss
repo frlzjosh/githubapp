@@ -1,0 +1,24 @@
+.project{
+    &__card{
+        box-shadow: 2px 2px 2px black !important;
+    }
+    &__name{
+        color: #FAFAFA !important;
+        font-weight: 900;
+        font-size: 1.15rem;
+    }
+    &__date{
+        display: inline;
+        text-align: right;
+        right: 0px;
+        position: absolute;
+        margin-right: 18px;
+        font-weight: 200;
+    }
+    &__display-linebreak{
+        white-space: pre-line;
+    }
+    &__icon{
+        margin-top: 20px;
+    }
+}
