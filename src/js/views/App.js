@@ -7,16 +7,20 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Divider, Header} from 'semantic-ui-react'
 import ButtonEx from '../components/btn'
 import Panel from '../components/panel'
-import DarkList from '../components/projectList'
+import ProjectList from '../components/projectList'
 import Navbar from './../components/nav'
 
 class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            metaLabProjects: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
+            medtronicProjects: ['Patient Monitor'],
+            personalProjects: ['My Portfolio', 'Scraps', 'Platelist'],
+            competitionsAndHackathons: ['LA Hacks', 'Bullring', 'Northrop Grumman Hackathon']
+        }
+    }
     render (){
-        var metaLabProjects = ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit']
-        var medtronicProjects = ['Patient Monitor']
-        var personalProjects = ['My Portfolio', 'Scraps', 'Platelist']
-
-        var competitionsAndHackathons = ['LA Hacks', 'Bullring', 'Northrop Grumman Hackathon']
         return (
             <div className="ui container">
                 <Navbar></Navbar>
@@ -26,24 +30,24 @@ class App extends React.Component {
                 <Panel
                     header="Projects"
                 />
-                <DarkList
+                <ProjectList
                     organization="Medtronic Inc."
-                    projects={medtronicProjects}
+                    projects={this.state.medtronicProjects}
                 />
-                <DarkList
+                <ProjectList
                     organization="META+LAB"
-                    projects={metaLabProjects}
+                    projects={this.state.metaLabProjects}
                 />
-                <DarkList
+                <ProjectList
                     organization="PERSONAL PROJECTS"
-                    projects={personalProjects}
+                    projects={this.state.personalProjects}
                 />
                 <Panel
                     header="Hackathon's & Competitions"
                 />
-                <DarkList
+                <ProjectList
                     organization="PERSONAL PROJECTS"
-                    projects={competitionsAndHackathons}
+                    projects={this.state.competitionsAndHackathons}
                 />
             </div>
         );
