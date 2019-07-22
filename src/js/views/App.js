@@ -25,19 +25,19 @@ class App extends React.Component {
             medtronicProjects: ['Patient Monitor'],
             medtronicProjectDates: ['06/2019 - Present'],
             medtronicProjectDescriptions: ["- Creating a system based off an event-driven architecture that reacts to a continuous stream of data in Go\n- Using Angular.js on the client-side to subscribe to incoming data from a web-socket\n- Node.js serves notifications to the users when events are triggered from the Go server"],
-            personalProjects: ['My Portfolio', 'Scraps', 'Platelist'],
+            personalProjects: ['My Portfolio Website', 'Scraps', 'Platelist'],
             personalProjectDates: ['03/2019 - Present', '04/2019', '03/2019 - 05/2019'],
             personalProjectDescriptions: [
-                "- Creating modular and reusable components in React.js",
+                "- Creating my portfolio websute with modular and reusable components to learn React.js\n- Implenting React Semantic-UI for styling and to customize components",
                 "- Implemented several API's and libraries through Vue.js wrapper libraries.\n- Designed and developed a UI/UX into a functional product.",
                 "- Semi-finalist for CSUN's Bullring against other startup companies. \n- Developed an iOS/Android food platform called Platelist."
             ],
             competitionsAndHackathons: ['LA Hacks', 'Bullring', 'Northrop Grumman Hackathon'],
             competitionsAndHackathonDates: ['04/2019', '02/2019 - 05/2019', '10/2017'],
             competitionsAndHackathonDescriptions: [
-                "- Competed against teams in a 48-hour Hackathon to create products that will help or advance their city. Developed an app that uses machine learning, and geolocation to sustain pollution.",
-                "- Semi-finalist for CSUN's Bullring against other startup companies. Developed an iOS/Android food platform called Platelist.",
-                "- Won 2nd place in Northrop Grummans 24 hour Hackathon, versus students from universities in Southern California. We created a mobile web app using geolocation to help users."
+                "Competed against teams in a 48-hour Hackathon to create products that will help or advance their city. Developed an app that uses machine learning, and geolocation to sustain pollution.",
+                "Semi-finalist for CSUN's Bullring against other startup companies. Developed an iOS/Android food platform called Platelist.",
+                "Won 2nd place in Northrop Grummans 24 hour Hackathon, versus students from universities in Southern California. We created a mobile web app using geolocation to help users."
             ]
         }
     }
@@ -45,7 +45,7 @@ class App extends React.Component {
     render (){
         return (
             <div className="ui container">
-                <Navbar></Navbar>
+                {/* <Navbar></Navbar> */}
                 <Container>
                     <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
                     <ButtonEx/>
