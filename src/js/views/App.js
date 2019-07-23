@@ -16,7 +16,7 @@ class App extends React.Component {
         this.state = {
             metaLabProjects: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
             metaLabProjectDescriptions: [
-                "- Retreived database queries using dependency injection through service/contract flow.\n- Created tests for functionality and data on Vue.js components as well as services and controllers with PHP unit tests.\n- Engineered the architecture and flow on how to efficiently implement and create our applications UI/UX.",
+                "- Retreived database queries using dependency injection through service/contract flow.\n- Created tests for functionality and data on Vue.js components as well as services and controllers with PHP unit tests.\n- Engineered the architecture and flow to efficiently implement and create iSTART's UI/UX.",
                 "- Refactored and optimized the front-end to store data with state management through Vue-x.\n- Managed front end functionality to be modular using Vue.js.\n- Implemented controller logic for database queries.",
                 "- Implemented an internal UI-Kit to create a modern-designed website",
                 "- Created themed and modular components for a UI-Kit"
