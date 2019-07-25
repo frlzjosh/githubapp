@@ -14,6 +14,9 @@ class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            employers : ['Medtronic Inc.', 'META+LAB'],
+            employerRole: ['Software Engineer Intern', 'Software Developer'],
+            employerDescription: ["Creating user interfaces so diabetic patients can maintain and monitor their health.\nPrototyping a progressive web app that can be accessed through the web on both desktop and mobile devices.","Creating mobile web apps that adhere to modern web development standards and practices.\nDeploy & design database schema using ORM through a PHP framework."],
             metaLabProjects: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
             metaLabProjectDescriptions: [
                 "- Retreived database queries using dependency injection through service/contract flow.\n- Created tests for functionality and data on Vue.js components as well as services and controllers with PHP unit tests.\n- Engineered the architecture and flow to efficiently implement and create iSTART's UI/UX.",
@@ -44,12 +47,22 @@ class App extends React.Component {
 
     render (){
         return (
-            <div className="ui container">
-                {/* <Navbar></Navbar> */}
+            <div className="ui container margin__bottom--4rem">
+                <Navbar></Navbar>
                 <Container>
                     <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
                     <ButtonEx/>
                     <Divider hidden />
+                    <Panel
+                        header="Work Experience"
+                    />
+                    <ProjectList
+                        organization="MEDTRONIC INC."
+                        projects={this.state.employers}
+                        descriptions={this.state.employerDescription}
+                        date = {this.state.employerRole}
+                        isHeaderNeeded = "false"
+                    />
                     <Panel
                         header="Projects"
                     />

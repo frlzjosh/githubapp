@@ -3,3 +3,15 @@
 .font--white{
     color: $white !important;
 }
+
+.display-linebreak{
+    white-space: pre-line;
+}
+
+.margin{
+    &__bottom{
+        &--4rem{
+            margin-bottom: 4rem;
+        }
+    }
+}

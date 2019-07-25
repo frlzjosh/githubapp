@@ -5,48 +5,26 @@ import { Menu, activeItem } from 'semantic-ui-react'
 
 
 export default class Navbar extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            navbarItems: ['Resume', 'Plans [under construction]', 'Blog [under construction]']
+        }
+    }
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
     render() {
         return (
             <Menu>
-                <Menu.Item
-                    name='About Me'
-                    active={activeItem === 'About Me'}
-                    onClick={this.handleItemClick}
-                    >
-                    About Me
-                </Menu.Item>
-                <Menu.Item
-                    name='Work Experience'
-                    active={activeItem === 'Work Experience'}
-                    onClick={this.handleItemClick}
-                >
-                Work Experience
-                </Menu.Item>
-
-                <Menu.Item 
-                    name='Projects'
-                    active={activeItem === 'Projects'}
-                    onClick={this.handleItemClick}>
-                Projects
-                </Menu.Item>
-
-                <Menu.Item
-                    name='Hackathons & Competitions'
-                    active={activeItem === 'Hackathons & Competitions'}
-                    onClick={this.handleItemClick}
-                >
-                Hackathons & Competitions
-                </Menu.Item>
-                
-                <Menu.Item
-                    name='School'
-                    active={activeItem === 'School'}
-                    onClick={this.handleItemClick}
-                >
-                School
-                </Menu.Item>
+                {   this.state.navbarItems.map((item, id) =>{  
+                        return <Menu.Item key={id}
+                            name={item}
+                            active={activeItem === 'item'}
+                            onClick={this.handleItemClick}
+                        >
+                        {item }
+                        </Menu.Item>
+                    })
+                }
             </Menu>
         )
     }
