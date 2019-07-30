@@ -43,19 +43,15 @@ export default class Resume extends React.Component{
 
     render (){
         return (
-            <div className="ui container margin__bottom--4rem">
-                <Navbar></Navbar>
+            <div className="ui container margin__top--1rem margin__bottom--4rem">
                 <Container>
-                    <Header className="font--white" as="h2">Joshua J. Magdaleno's Portfolio</Header>
-                    <ButtonEx/>
-                    <Divider hidden />
                     <Panel
                         header="Work Experience"
                     />
                     <ProjectList
                         organization="MEDTRONIC INC."
-                        projects={this.state.employers}
-                        descriptions={this.state.employerDescription}
+                        title={this.state.employers}
+                        body={this.state.employerDescription}
                         date = {this.state.employerRole}
                         isHeaderNeeded = "false"
                     />
@@ -64,22 +60,22 @@ export default class Resume extends React.Component{
                     />
                     <ProjectList
                         organization="MEDTRONIC INC."
-                        projects={this.state.medtronicProjects}
-                        descriptions={this.state.medtronicProjectDescriptions}
+                        title={this.state.medtronicProjects}
+                        body={this.state.medtronicProjectDescriptions}
                         date = {this.state.medtronicProjectDates}
                         isHeaderNeeded = "true"
                     />
                     <ProjectList
                         organization="META+LAB"
-                        projects={this.state.metaLabProjects}
-                        descriptions={this.state.metaLabProjectDescriptions}
+                        title={this.state.metaLabProjects}
+                        body={this.state.metaLabProjectDescriptions}
                         date={this.state.metaLabProjectDates}
                         isHeaderNeeded = "true"
                     />
                     <ProjectList
                         organization="PERSONAL PROJECTS"
-                        projects={this.state.personalProjects}
-                        descriptions={this.state.personalProjectDescriptions}
+                        title={this.state.personalProjects}
+                        body={this.state.personalProjectDescriptions}
                         date={this.state.personalProjectDates}
                         isHeaderNeeded = "true"
                     />
@@ -88,8 +84,8 @@ export default class Resume extends React.Component{
                     />
                     <ProjectList
                         organization="PERSONAL PROJECTS"
-                        projects={this.state.competitionsAndHackathons}
-                        descriptions={this.state.competitionsAndHackathonDescriptions}
+                        title={this.state.competitionsAndHackathons}
+                        body={this.state.competitionsAndHackathonDescriptions}
                         date={this.state.competitionsAndHackathonDates}
                         isHeaderNeeded = "false"
                     />

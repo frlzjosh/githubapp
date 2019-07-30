@@ -27,16 +27,16 @@ class ProjectList extends Component{
           : null
         }
         {
-          this.props.projects.map((project, id)=>{
+          this.props.title.map((title, id)=>{
             return (
             <List.Item key={id}>
               <Accordion>
                 <Accordion.Title className="project__name" active={this.state.activeIndex === 0} index={0} onClick={this.handleClick}>
-                  <li className="project__name">{project} <p className="project__date">{this.props.date[id]}</p><Icon className="project__icon" name='dropdown' /></li> 
+                  <li className="project__name">{title} <p className="project__date">{this.props.date[id]}</p><Icon className="project__icon" name='dropdown' /></li> 
                 </Accordion.Title>
                 <Accordion.Content active={this.state.activeIndex === 0}>
                   <p className="project__display-linebreak">
-                    {this.props.descriptions[id]}
+                    {this.props.body[id]}
                   </p>
                 </Accordion.Content>
               </Accordion>

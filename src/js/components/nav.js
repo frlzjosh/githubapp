@@ -8,7 +8,8 @@ export default class Navbar extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            navbarItems: ['Resume', 'Plans [under construction]', 'Blog [under construction]']
+            navbarItems: ['About Me', 'Resume', 'Plans [under construction]', 'Blog [under construction]'],
+            navbarItemRoutes: ['/about', '/', '/', '/']
         }
     }
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -16,13 +17,17 @@ export default class Navbar extends React.Component{
         return (
             <Menu>
                 {   this.state.navbarItems.map((item, id) =>{  
-                        return <Menu.Item key={id}
-                            name={item}
-                            active={activeItem === 'item'}
-                            onClick={this.handleItemClick}
-                        >
-                        {item }
-                        </Menu.Item>
+                        return (
+                            <Link key={id} to={this.state.navbarItemRoutes[id]}>
+                                <Menu.Item 
+                                    name={item}
+                                    active={activeItem === 'item'}
+                                    // onClick={this.handleItemClick}
+                                >
+                                {item }
+                                </Menu.Item>
+                            </Link>
+                        )
                     })
                 }
             </Menu>
