@@ -12,7 +12,10 @@ export default class About extends React.Component{
         this.state = {
             education: ['Education'],
             educationBody: ["California State University - Northridge\nFull-time student styding for a Bachelor of Science in Computer Science"],
-            educationDate: ['Expected to Graduate Fall 2020']
+            educationDate: ['Expected to Graduate Fall 2020'],
+            infoHeader: ['Contact Information'],
+            info: ["Phone: (818) 963-3920\n Email: joshua.j.magdaleno@gmail.com\n"],
+            infoPlace: ["Feel free to contact me anytime"]
         }
     }
     render(){
@@ -20,17 +23,17 @@ export default class About extends React.Component{
             <Container>
                 <div className="margin__top--1rem">
                     <ProjectList
-                        organization="MEDTRONIC INC."
+                        organization=""
                         title={this.state.education}
                         body={this.state.educationBody}
                         date = {this.state.educationDate}
                         isHeaderNeeded = "false"
                     />
                     <ProjectList
-                        organization="MEDTRONIC INC."
-                        title={this.state.education}
-                        body={this.state.educationBody}
-                        date = {this.state.educationDate}
+                        organization=""
+                        title={this.state.infoHeader}
+                        body={this.state.info}
+                        date = {this.state.infoPlace}
                         isHeaderNeeded = "false"
                     />
                 </div>
