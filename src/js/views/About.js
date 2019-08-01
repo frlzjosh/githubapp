@@ -11,7 +11,7 @@ export default class About extends React.Component{
         super(props)
         this.state = {
             education: ['Education'],
-            educationBody: ["California State University - Northridge\nFull-time student styding for a Bachelor of Science in Computer Science"],
+            educationBody: ["California State University - Northridge\nFull-time student studying for a Bachelor of Science in Computer Science"],
             educationDate: ['Expected to Graduate Fall 2020'],
             infoHeader: ['Contact Information'],
             info: ["Phone: (818) 963-3920\n Email: joshua.j.magdaleno@gmail.com\n"],
