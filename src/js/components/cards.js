@@ -4,7 +4,7 @@ import Divider from './divider'
 
 import {List, Segment, Accordion, Icon} from 'semantic-ui-react'
 
-class ProjectList extends Component{
+export default class Cards extends Component{
   state = {
     activeIndex :0
   }
@@ -49,5 +49,5 @@ class ProjectList extends Component{
     )
   }
 }
-  export default ProjectList
+  
   
