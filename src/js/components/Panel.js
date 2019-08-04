@@ -7,7 +7,7 @@ const Panel = (props) => {
     return (
         <div className="panel panel--pad">
             <Header as='h2'>
-                <Icon name='briefcase' />
+                <Icon name={props.icon} />
                 <Header.Content>{props.header}</Header.Content>
             </Header>
         </div>

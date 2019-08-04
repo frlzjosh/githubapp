@@ -7,6 +7,7 @@ import ButtonEx from '../components/btn'
 import {Route, Switch } from "react-router-dom";
 import Resume from './Resume'
 import About from './About'
+import Goals from './Goals'
 import Navbar from './../components/nav'
 import { Divider, Container, Header } from 'semantic-ui-react';
 
@@ -22,6 +23,7 @@ export default function App() {
             <Switch>   
                 <Route exact path='/' component={Resume}/>
                 <Route path='/about' component={About}/>   
+                <Route path='/goals' component={Goals}/>   
             </Switch>
         </div>  
     );

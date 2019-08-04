@@ -47,6 +47,7 @@ export default class Resume extends React.Component{
                 <Container>
                     <Panel
                         header="Work Experience"
+                        icon="briefcase"
                     />
                     <Cards
                         organization="MEDTRONIC INC."
@@ -57,16 +58,17 @@ export default class Resume extends React.Component{
                     />
                     <Panel
                         header="Projects"
+                        icon="wrench"
                     />
                     <Cards
-                        organization="MEDTRONIC INC."
+                        organization="Work done at MEDTRONIC INC."
                         title={this.state.medtronicProjects}
                         body={this.state.medtronicProjectDescriptions}
                         date = {this.state.medtronicProjectDates}
                         isHeaderNeeded = "true"
                     />
                     <Cards
-                        organization="META+LAB"
+                        organization="Work done at META+LAB"
                         title={this.state.metaLabProjects}
                         body={this.state.metaLabProjectDescriptions}
                         date={this.state.metaLabProjectDates}
@@ -81,6 +83,7 @@ export default class Resume extends React.Component{
                     />
                     <Panel
                         header="Hackathon's & Competitions"
+                        icon="trophy"
                     />
                     <Cards
                         organization="PERSONAL PROJECTS"

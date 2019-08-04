@@ -11,14 +11,21 @@ export default class About extends React.Component{
         super(props)
         this.state = {
             education: ['Education'],
-            educationBody: ["California State University - Northridge\nFull-time student styding for a Bachelor of Science in Computer Science"],
-            educationDate: ['Expected to Graduate Fall 2020']
+            educationBody: ["California State University - Northridge\nFull-time student studying for a Bachelor of Science in Computer Science"],
+            educationDate: ['Expected to Graduate Fall 2020'],
+            infoHeader: ['Contact Information'],
+            info: ["Phone: (818) 963-3920\n Email: joshua.j.magdaleno@gmail.com\n"],
+            infoPlace: ["Feel free to contact me anytime"]
         }
     }
     render(){
         return(
             <Container>
                 <div className="margin__top--1rem">
+                    <Panel
+                        header="About"
+                        icon="phone"
+                    />
                     <Cards
                         organization="MEDTRONIC INC."
                         title={this.state.education}
@@ -28,9 +35,9 @@ export default class About extends React.Component{
                     />
                     <Cards
                         organization="MEDTRONIC INC."
-                        title={this.state.education}
-                        body={this.state.educationBody}
-                        date = {this.state.educationDate}
+                        title={this.state.infoHeader}
+                        body={this.state.info}
+                        date = {this.state.infoPlace}
                         isHeaderNeeded = "false"
                     />
                 </div>

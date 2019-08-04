@@ -8,8 +8,8 @@ export default class Navbar extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            navbarItems: ['About Me', 'Resume', 'Plans [under construction]', 'Blog [under construction]'],
-            navbarItemRoutes: ['/about', '/', '/', '/']
+            navbarItems: ['About Me', 'Resume', 'Plans [in progress]', 'Blog [planning]'],
+            navbarItemRoutes: ['/about', '/', '/goals', '/']
         }
     }
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
