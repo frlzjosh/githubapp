@@ -12,7 +12,7 @@ export default class Resume extends React.Component{
         this.state = {
             employers : ['Medtronic Inc.', 'META+LAB'],
             employerRole: ['Software Engineer Intern', 'Software Developer'],
-            employerDescription: ["Creating user interfaces so diabetic patients can maintain and monitor their health.\nPrototyping a progressive web app that can be accessed through the web on both desktop and mobile devices.","Creating mobile web apps that adhere to modern web development standards and practices.\nDeploy & design database schema using ORM through a PHP framework."],
+            employerDescription: ["Creating user interfaces so diabetic patients can maintain and monitor their health.\nResearching pros and cons of creating Progressive Web Applications over Native applications by comparing its features and abilities amongst all devices.\nPrototyping a progressive web application that is accessible on all mobile/desktop devices, which mimics an actual product from Medtronic.","Creating mobile web applications that adhere to modern web development standards and practices.\nDeploy & design database schema using ORM through a PHP framework."],
             metaLabProjects: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
             metaLabProjectDescriptions: [
                 "- Retreived database queries using dependency injection through service/contract flow.\n- Created tests for functionality and data on Vue.js components as well as services and controllers with PHP unit tests.\n- Engineered the architecture and flow to efficiently implement and create iSTART's UI/UX.",
@@ -27,7 +27,7 @@ export default class Resume extends React.Component{
             personalProjects: ['My Portfolio Website', 'Scraps', 'Platelist'],
             personalProjectDates: ['03/2019 - Present', '04/2019', '03/2019 - 05/2019'],
             personalProjectDescriptions: [
-                "- Creating my portfolio websute with modular and reusable components to learn React.js\n- Implenting React Semantic-UI for styling and to customize components",
+                "- Creating my portfolio website with modular and reusable components to learn React.js\n- Implenting React Semantic-UI for styling and to customize components",
                 "- Implemented several API's and libraries through Vue.js wrapper libraries.\n- Designed and developed a UI/UX into a functional product.",
                 "- Semi-finalist for CSUN's Bullring against other startup companies. \n- Developed an iOS/Android food platform called Platelist."
             ],
