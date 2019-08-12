@@ -13,8 +13,9 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'js', 'main.js'),
     // And to place the output in the `build` directory
     output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'main.js'
+      path: path.join(__dirname, 'dist'),
+      filename: 'main.js',
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -38,6 +39,9 @@ module.exports = {
             ]
         },
       ]
+    },
+    devServer:{
+      historyApiFallback: true
     },
     plugins: [htmlPlugin],
     

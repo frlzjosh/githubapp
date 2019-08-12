@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Divider, Header, Container} from 'semantic-ui-react'
 import ButtonEx from '../components/btn'
 import Panel from '../components/panel'
-import ProjectList from '../components/projectList'
+import Cards from '../components/Cards'
 import Navbar from './../components/nav'
 
 export default class Resume extends React.Component{
@@ -47,8 +47,9 @@ export default class Resume extends React.Component{
                 <Container>
                     <Panel
                         header="Work Experience"
+                        icon="briefcase"
                     />
-                    <ProjectList
+                    <Cards
                         organization="MEDTRONIC INC."
                         title={this.state.employers}
                         body={this.state.employerDescription}
@@ -57,22 +58,23 @@ export default class Resume extends React.Component{
                     />
                     <Panel
                         header="Projects"
+                        icon="wrench"
                     />
-                    <ProjectList
-                        organization="MEDTRONIC INC."
+                    <Cards
+                        organization="Work done at MEDTRONIC INC."
                         title={this.state.medtronicProjects}
                         body={this.state.medtronicProjectDescriptions}
                         date = {this.state.medtronicProjectDates}
                         isHeaderNeeded = "true"
                     />
-                    <ProjectList
-                        organization="META+LAB"
+                    <Cards
+                        organization="Work done at META+LAB"
                         title={this.state.metaLabProjects}
                         body={this.state.metaLabProjectDescriptions}
                         date={this.state.metaLabProjectDates}
                         isHeaderNeeded = "true"
                     />
-                    <ProjectList
+                    <Cards
                         organization="PERSONAL PROJECTS"
                         title={this.state.personalProjects}
                         body={this.state.personalProjectDescriptions}
@@ -81,8 +83,9 @@ export default class Resume extends React.Component{
                     />
                     <Panel
                         header="Hackathon's & Competitions"
+                        icon="trophy"
                     />
-                    <ProjectList
+                    <Cards
                         organization="PERSONAL PROJECTS"
                         title={this.state.competitionsAndHackathons}
                         body={this.state.competitionsAndHackathonDescriptions}

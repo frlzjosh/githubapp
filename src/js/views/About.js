@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Divider, Header, Container} from 'semantic-ui-react'
 import ButtonEx from '../components/btn'
 import Panel from '../components/panel'
-import ProjectList from '../components/projectList'
+import Cards from '../components/Cards'
 import Navbar from './../components/nav'
 
 export default class About extends React.Component{
@@ -22,15 +22,19 @@ export default class About extends React.Component{
         return(
             <Container>
                 <div className="margin__top--1rem">
-                    <ProjectList
-                        organization=""
+                    <Panel
+                        header="About"
+                        icon="phone"
+                    />
+                    <Cards
+                        organization="MEDTRONIC INC."
                         title={this.state.education}
                         body={this.state.educationBody}
                         date = {this.state.educationDate}
                         isHeaderNeeded = "false"
                     />
-                    <ProjectList
-                        organization=""
+                    <Cards
+                        organization="MEDTRONIC INC."
                         title={this.state.infoHeader}
                         body={this.state.info}
                         date = {this.state.infoPlace}

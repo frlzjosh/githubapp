@@ -17,6 +17,9 @@
         font-weight: 200;
     }
     &__display-linebreak{
+        @media screen and (min-width: 450px){
+            font-size: 1.3rem;
+        }
         white-space: pre-line;
     }
     &__icon{
