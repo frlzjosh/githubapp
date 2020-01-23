@@ -1,7 +1,7 @@
 {
   "name": "githubapp",
   "version": "1.0.0",
-  "description": "SPA react app using react-router for my github.io website",
+  "description": "SPA react app using react-router for my porfolio website",
   "main": "src/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
