@@ -15,6 +15,18 @@ export default class Cards extends Component{
 
     this.setState({ activeIndex: newIndex })
   }
+
+  checkIfUrlExists(id){
+    if(this.props.url[id]){
+      const urlRef = this.props.url[id]
+      return (
+        <h4 className="project__url">Check it out here:&emsp;<a href={urlRef}>{this.props.url[id]}</a></h4>
+      )
+    }else{
+      return null;
+    }
+  }
+
   render(){
     return (
       <Segment inverted className="project__card">
@@ -38,6 +50,9 @@ export default class Cards extends Component{
                   <p className="project__display-linebreak">
                     {this.props.body[id]}
                   </p>
+                  {
+                    this.checkIfUrlExists(id)
+                  }
                 </Accordion.Content>
               </Accordion>
             </List.Item>

@@ -21,6 +21,7 @@ export default class Resume extends React.Component{
                     "• Creating mobile web applications that adhere to modern web development standards and practices."+
                     "\n• Deploy & design database schema using ORM through a PHP framework."
                 ],
+                urls: [null, null]
             },
             metaProjects:{
                 title: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
@@ -34,21 +35,38 @@ export default class Resume extends React.Component{
                     "• Implemented an internal UI-Kit to create a modern-designed website.",
                     "• Created themed and modular components for a UI-Kit."
                 ],
-                dates: ['January 2019 - May 2019', 'December 2017 - January 2019', 'Novemeber 2017 - February 2018', 'August 2017 - November 2017']
+                dates: ['January 2019 - May 2019', 'December 2017 - January 2019', 'Novemeber 2017 - February 2018', 'August 2017 - November 2017'],
+                urls: [null, null, null, null]
             },
             medtronicProjects:{
                 title:['Patient Monitor'],
                 dates: ['June 2019 - Present'],
-                descriptions: ["• Creating a system based off an event-driven architecture that reacts to a continuous stream of data in Go\n• Using Angular.js on the client-side to subscribe to incoming data from a web-socket\n• Node.js serves notifications to the users when events are triggered from the Go server"]
+                descriptions: ["• Creating a system based off an event-driven architecture that reacts to a continuous stream of data in Go\n• Using Angular.js on the client-side to subscribe to incoming data from a web-socket\n• Node.js serves notifications to the users when events are triggered from the Go server"],
+                urls: [null]
             },
             personalProjects: {
-                title: ['My Portfolio Website', 'Scraps', 'Platelist'],
-                dates: ['March 2019 - Present', 'April 2019', 'March 2019 - May 2019'],
+                title: ['CarFinder', 'Pet Retreiver', 'My Portfolio Website', 'Scraps', 'Platelist'],
+                dates: ['October 2019 - December 2019','September 2019', 'March 2019 - Present', 'April 2019', 'March 2019 - May 2019'],
                 descriptions: [
-                    "• Creating my portfolio website with modular and reusable components to learn React.js.\n• Implenting React Semantic-UI for styling and to customize components.",
-                    "• Implemented several API's and libraries through Vue.js wrapper libraries.\n• Designed and developed a UI/UX into a functional product.",
-                    "• Semi-finalist for CSUN's Bullring against other startup companies. \n• Developed an iOS/Android food platform called Platelist."
+                    "• Hosting Spring Boot services that I created onto Google App Engine while connecting to Cloud SQL database. \n"+
+                    "• Ensure user authentication through Okta whenever client makes any request.",
+                    "• Using Vue-x as state management to fetch and retrieve state on any component.\n"+
+                    "• Developed as a Progressive Web Application with a downloadable feature to be used as a mobile web application or a desktop web application.\n"+
+                    "• Using Google Maps API to show data of missing pets.",
+                    "• Creating my portfolio website with modular and reusable components to learn React.js.\n"+
+                    "• Implenting React Semantic-UI for styling and to customize components.",
+                    "• Implemented several API's and libraries through Vue.js wrapper libraries.\n"+
+                    "• Designed and developed a UI/UX into a functional product.",
+                    "• Semi-finalist for CSUN's Bullring against other startup companies. \n"+
+                    "• Developed an iOS/Android food platform called Platelist."
                 ],
+                urls: [
+                    "https://car-app.netlify.com",
+                    "https://5d7199c272feae0191d2865e--petretriever.netlify.com",
+                    "https://github.com/frlzjosh/githubapp",
+                    "https://github.com/frlzjosh/scraps",
+                    null
+                ]
             },
             competitionsAndHackathons: {
                 title:['Deans List', 'LA Hjacks', 'Bullring', 'Northrop Grumman Hackathon'],
@@ -58,7 +76,8 @@ export default class Resume extends React.Component{
                     "• Competed against teams in a 48-hour Hackathon to create products that will help or advance their city. Developed an app that uses machine learning, and geolocation to sustain pollution.",
                     "• Semi-finalist for CSUN's Bullring against other startup companies. Developed an iOS/Android food platform called Platelist.",
                     "• Won 2nd place in Northrop Grummans 24 hour Hackathon, versus students from universities in Southern California. We created a mobile web app using geolocation to help users."
-                ]
+                ],
+                urls: [null, null, null, null]
             },
         }
     }
@@ -76,6 +95,7 @@ export default class Resume extends React.Component{
                         title={this.state.employers.title}
                         body={this.state.employers.descriptions}
                         date = {this.state.employers.dates}
+                        url={this.state.employers.urls}
                         isHeaderNeeded = "false"
                     />
                     <Panel
@@ -87,6 +107,7 @@ export default class Resume extends React.Component{
                         title={this.state.medtronicProjects.title}
                         body={this.state.medtronicProjects.descriptions}
                         date = {this.state.medtronicProjects.dates}
+                        url={this.state.medtronicProjects.urls}
                         isHeaderNeeded = "true"
                     />
                     <Cards
@@ -94,6 +115,7 @@ export default class Resume extends React.Component{
                         title={this.state.metaProjects.title}
                         body={this.state.metaProjects.descriptions}
                         date={this.state.metaProjects.dates}
+                        url={this.state.metaProjects.urls}
                         isHeaderNeeded = "true"
                     />
                     <Cards
@@ -101,6 +123,7 @@ export default class Resume extends React.Component{
                         title={this.state.personalProjects.title}
                         body={this.state.personalProjects.descriptions}
                         date={this.state.personalProjects.dates}
+                        url={this.state.personalProjects.urls}
                         isHeaderNeeded = "true"
                     />
                     <Panel
@@ -112,6 +135,7 @@ export default class Resume extends React.Component{
                         title={this.state.competitionsAndHackathons.title}
                         body={this.state.competitionsAndHackathons.descriptions}
                         date={this.state.competitionsAndHackathons.dates}
+                        url={this.state.competitionsAndHackathons.urls}
                         isHeaderNeeded = "false"
                     />
                 </Container>
