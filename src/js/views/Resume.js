@@ -10,34 +10,75 @@ export default class Resume extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            employers : ['Medtronic Inc.', 'META+LAB'],
-            employerRole: ['Software Engineer Intern', 'Software Developer'],
-            employerDescription: ["Creating user interfaces so diabetic patients can maintain and monitor their health.\nResearching pros and cons of creating Progressive Web Applications over Native applications by comparing its features and abilities amongst all devices.\nPrototyping a progressive web application that is accessible on all mobile/desktop devices, which mimics an actual product from Medtronic.","Creating mobile web applications that adhere to modern web development standards and practices.\nDeploy & design database schema using ORM through a PHP framework."],
-            metaLabProjects: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
-            metaLabProjectDescriptions: [
-                "- Retreived database queries using dependency injection through service/contract flow.\n- Created tests for functionality and data on Vue.js components as well as services and controllers with PHP unit tests.\n- Engineered the architecture and flow to efficiently implement and create iSTART's UI/UX.",
-                "- Refactored and optimized the front-end to store data with state management through Vue-x.\n- Managed front end functionality to be modular using Vue.js.\n- Implemented controller logic for database queries.",
-                "- Implemented an internal UI-Kit to create a modern-designed website",
-                "- Created themed and modular components for a UI-Kit"
-            ],
-            metaLabProjectDates: ['01/2019 - 05/2019', '12/2017 - 01/2019', '11/2017 - 02/2018', '08/2017 - 11/2017'],
-            medtronicProjects: ['Patient Monitor'],
-            medtronicProjectDates: ['06/2019 - Present'],
-            medtronicProjectDescriptions: ["- Creating a system based off an event-driven architecture that reacts to a continuous stream of data in Go\n- Using Angular.js on the client-side to subscribe to incoming data from a web-socket\n- Node.js serves notifications to the users when events are triggered from the Go server"],
-            personalProjects: ['My Portfolio Website', 'Scraps', 'Platelist'],
-            personalProjectDates: ['03/2019 - Present', '04/2019', '03/2019 - 05/2019'],
-            personalProjectDescriptions: [
-                "- Creating my portfolio website with modular and reusable components to learn React.js\n- Implenting React Semantic-UI for styling and to customize components",
-                "- Implemented several API's and libraries through Vue.js wrapper libraries.\n- Designed and developed a UI/UX into a functional product.",
-                "- Semi-finalist for CSUN's Bullring against other startup companies. \n- Developed an iOS/Android food platform called Platelist."
-            ],
-            competitionsAndHackathons: ['LA Hacks', 'Bullring', 'Northrop Grumman Hackathon'],
-            competitionsAndHackathonDates: ['04/2019', '02/2019 - 05/2019', '10/2017'],
-            competitionsAndHackathonDescriptions: [
-                "Competed against teams in a 48-hour Hackathon to create products that will help or advance their city. Developed an app that uses machine learning, and geolocation to sustain pollution.",
-                "Semi-finalist for CSUN's Bullring against other startup companies. Developed an iOS/Android food platform called Platelist.",
-                "Won 2nd place in Northrop Grummans 24 hour Hackathon, versus students from universities in Southern California. We created a mobile web app using geolocation to help users."
-            ]
+            employers : {
+                title: ['Medtronic Inc.', 'META+LAB'],
+                dates: ['Software Engineer Intern', 'Software Developer'],
+                descriptions: [
+                    "• Creating user interfaces so diabetic patients can maintain and monitor their health."+
+                    "\n• Collaborating with the Medtronic R&D team on future products and services relating to the care and treatment of diabetes."+
+                    "\n• Developing full-fledged prototypes to demo and efficiently explain Pros & Cons of these technologies."+
+                    "\n• Creating internal tools and applications for teams all around Medtronic to use.",
+                    "• Creating mobile web applications that adhere to modern web development standards and practices."+
+                    "\n• Deploy & design database schema using ORM through a PHP framework."
+                ],
+                urls: [null, null]
+            },
+            metaProjects:{
+                title: ['iSTART', '10 Letters', 'META+LAB Website', 'META-UI Kit'],
+                descriptions: [
+                    "• Retreived database queries using dependency injection through service/contract flow.\n"+
+                    "• Created tests for functionality and data on Vue.js components as well as services and controllers with PHP unit tests.\n"+
+                    "• Engineered the architecture and flow to efficiently implement and create iSTART's UI/UX.",
+                    "• Refactored and optimized the front-end to store data with state management through Vue-x.\n"+
+                    "• Managed front end functionality to be modular using Vue.js.\n"+
+                    "• Implemented controller logic for database queries.",
+                    "• Implemented an internal UI-Kit to create a modern-designed website.",
+                    "• Created themed and modular components for a UI-Kit."
+                ],
+                dates: ['January 2019 - May 2019', 'December 2017 - January 2019', 'Novemeber 2017 - February 2018', 'August 2017 - November 2017'],
+                urls: [null, null, null, null]
+            },
+            medtronicProjects:{
+                title:['Patient Monitor'],
+                dates: ['June 2019 - Present'],
+                descriptions: ["• Creating a system based off an event-driven architecture that reacts to a continuous stream of data in Go\n• Using Angular.js on the client-side to subscribe to incoming data from a web-socket\n• Node.js serves notifications to the users when events are triggered from the Go server"],
+                urls: [null]
+            },
+            personalProjects: {
+                title: ['CarFinder', 'Pet Retreiver', 'My Portfolio Website', 'Scraps', 'Platelist'],
+                dates: ['October 2019 - December 2019','September 2019', 'March 2019 - Present', 'April 2019', 'March 2019 - May 2019'],
+                descriptions: [
+                    "• Hosting Spring Boot services that I created onto Google App Engine while connecting to Cloud SQL database. \n"+
+                    "• Ensure user authentication through Okta whenever client makes any request.",
+                    "• Using Vue-x as state management to fetch and retrieve state on any component.\n"+
+                    "• Developed as a Progressive Web Application with a downloadable feature to be used as a mobile web application or a desktop web application.\n"+
+                    "• Using Google Maps API to show data of missing pets.",
+                    "• Creating my portfolio website with modular and reusable components to learn React.js.\n"+
+                    "• Implenting React Semantic-UI for styling and to customize components.",
+                    "• Implemented several API's and libraries through Vue.js wrapper libraries.\n"+
+                    "• Designed and developed a UI/UX into a functional product.",
+                    "• Semi-finalist for CSUN's Bullring against other startup companies. \n"+
+                    "• Developed an iOS/Android food platform called Platelist."
+                ],
+                urls: [
+                    "https://car-app.netlify.com",
+                    "https://5d7199c272feae0191d2865e--petretriever.netlify.com",
+                    "https://github.com/frlzjosh/githubapp",
+                    "https://github.com/frlzjosh/scraps",
+                    null
+                ]
+            },
+            competitionsAndHackathons: {
+                title:['Deans List', 'LA Hjacks', 'Bullring', 'Northrop Grumman Hackathon'],
+                dates: ['Fall & Spring 2019', 'April 2019', 'February 2019 - May 2019', 'October 2017'],
+                descriptions: [
+                    "• Maintined above a 3.50 GPA in Spring '19 and Fall '19 as a Computer Science undegraduate.",
+                    "• Competed against teams in a 48-hour Hackathon to create products that will help or advance their city. Developed an app that uses machine learning, and geolocation to sustain pollution.",
+                    "• Semi-finalist for CSUN's Bullring against other startup companies. Developed an iOS/Android food platform called Platelist.",
+                    "• Won 2nd place in Northrop Grummans 24 hour Hackathon, versus students from universities in Southern California. We created a mobile web app using geolocation to help users."
+                ],
+                urls: [null, null, null, null]
+            },
         }
     }
 
@@ -51,9 +92,10 @@ export default class Resume extends React.Component{
                     />
                     <Cards
                         organization="MEDTRONIC INC."
-                        title={this.state.employers}
-                        body={this.state.employerDescription}
-                        date = {this.state.employerRole}
+                        title={this.state.employers.title}
+                        body={this.state.employers.descriptions}
+                        date = {this.state.employers.dates}
+                        url={this.state.employers.urls}
                         isHeaderNeeded = "false"
                     />
                     <Panel
@@ -62,34 +104,38 @@ export default class Resume extends React.Component{
                     />
                     <Cards
                         organization="Work done at MEDTRONIC INC."
-                        title={this.state.medtronicProjects}
-                        body={this.state.medtronicProjectDescriptions}
-                        date = {this.state.medtronicProjectDates}
+                        title={this.state.medtronicProjects.title}
+                        body={this.state.medtronicProjects.descriptions}
+                        date = {this.state.medtronicProjects.dates}
+                        url={this.state.medtronicProjects.urls}
                         isHeaderNeeded = "true"
                     />
                     <Cards
                         organization="Work done at META+LAB"
-                        title={this.state.metaLabProjects}
-                        body={this.state.metaLabProjectDescriptions}
-                        date={this.state.metaLabProjectDates}
+                        title={this.state.metaProjects.title}
+                        body={this.state.metaProjects.descriptions}
+                        date={this.state.metaProjects.dates}
+                        url={this.state.metaProjects.urls}
                         isHeaderNeeded = "true"
                     />
                     <Cards
                         organization="PERSONAL PROJECTS"
-                        title={this.state.personalProjects}
-                        body={this.state.personalProjectDescriptions}
-                        date={this.state.personalProjectDates}
+                        title={this.state.personalProjects.title}
+                        body={this.state.personalProjects.descriptions}
+                        date={this.state.personalProjects.dates}
+                        url={this.state.personalProjects.urls}
                         isHeaderNeeded = "true"
                     />
                     <Panel
-                        header="Hackathon's & Competitions"
+                        header="Hackathon's & Awards"
                         icon="trophy"
                     />
                     <Cards
-                        organization="PERSONAL PROJECTS"
-                        title={this.state.competitionsAndHackathons}
-                        body={this.state.competitionsAndHackathonDescriptions}
-                        date={this.state.competitionsAndHackathonDates}
+                        organization="Awards and Hackathons"
+                        title={this.state.competitionsAndHackathons.title}
+                        body={this.state.competitionsAndHackathons.descriptions}
+                        date={this.state.competitionsAndHackathons.dates}
+                        url={this.state.competitionsAndHackathons.urls}
                         isHeaderNeeded = "false"
                     />
                 </Container>
