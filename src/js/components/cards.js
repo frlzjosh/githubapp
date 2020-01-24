@@ -20,7 +20,7 @@ export default class Cards extends Component{
     if(this.props.url[id]){
       const urlRef = this.props.url[id]
       return (
-        <h4 className="project__url">Check it out here:&emsp;<a href={urlRef}>{this.props.url[id]}</a></h4>
+        <h4 className="project__url">Click Here To View:&emsp;<a href={urlRef}>{this.props.url[id]}</a></h4>
       )
     }else{
       return null;
